@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Getting Started with JavaScript</title>
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		/>
+		<style>
+			body,
+			.jumbotron {
+				padding: 30px;
+			}
+			body {
+				background: #efefef;
+			}
+			article {
+				background-color: #fff;
+				padding: 50px;
+				font-size: 19px;
+				line-height: 1.5;
+				min-height: 3000px;
+			}
+			.scroll-line {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 6px;
+				background-color: #1ce;
+				transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) width;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="scroll-line"></div>
+		<div class="container">
+			<article class="content">
+				Whatever you want!Buttons will appear pressed (with a darker
+				background, darker border, and inset shadow) when active.
+				There’s no need to add a class to &lt;button&gt;s as they use a
+				pseudo-class. However, you can still force the same active
+				appearance with .active (and include the aria-pressed="true"
+				attribute) should you need to replicate the state
+				programmatically.
+			</article>
+		</div>
+
+		<!-- 🔥🔥🔥🔥 start javascrtipt 🔥🔥🔥🔥 -->
+		<script>
+			const scrollLine = document.querySelector('.scroll-line');
+
+			function fillScrollLine() {
+				const windowHeight = window.innerHeight;
+				const fullHeight = document.body.clientHeight;
+				const scrolled = window.scrollY;
+				const percentScrolled =
+					(scrolled / (fullHeight - windowHeight)) * 100;
+				console.log(percentScrolled);
+
+				scrollLine.style.width = `${percentScrolled}%`;
+			}
+			window.addEventListener('scroll', debounce(fillScrollLine));
+
+			function debounce(func, wait = 15, immediate) {
+				var timeout;
+				return function () {
+					var context = this,
+						args = arguments;
+					var later = function () {
+						timeout = null;
+						if (!immediate) func.apply(context, args);
+					};
+					var callNow = immediate && !timeout;
+					clearTimeout(timeout);
+					timeout = setTimeout(later, wait);
+					if (callNow) func.apply(context, args);
+				};
+			}
+		</script>
+	</body>
+</html>

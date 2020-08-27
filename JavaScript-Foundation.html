@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Getting Started with JavaScript</title>
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		/>
+		<style>
+			body,
+			.jumbotron {
+				padding: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="jumbotron">
+			<h1>This is my site!</h1>
+
+			<button
+				type="button"
+				class="btn btn-primary"
+				onclick="changeText()"
+			>
+				Change the Text
+			</button>
+		</div>
+
+		<div class="dogs-list"></div>
+
+		<div class="jumbotron text-center">
+			<button
+				type="button"
+				class="btn btn-danger"
+				onclick="saySomething('this is the first button')"
+			>
+				My Button
+			</button>
+		</div>
+
+		<!-- 🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥 -->
+		<script>
+			//=========hello world
+			const header = document.querySelector('h1');
+			function changeText() {
+				header.innerText = 'New Text!';
+			}
+
+			//================Types and Variables
+			//strings
+			('this is my string');
+			('my second string');
+			('my name is chris');
+
+			//numbers
+			10;
+			500;
+			2.14;
+
+			//booleans (truthy/falsy)
+			true;
+			false;
+			console.log(Boolean('this is my string'));
+
+			//specials
+			undefined;
+			//let user;  user is undefined
+
+			null;
+			NaN; //not a number
+
+			//objects
+			const user = {
+				// key : value
+				name: 'Chris',
+				username: 'chrisoncode',
+			};
+
+			//array
+			const users = ['chirs', 'nick', 'holly'];
+			const luckynumbers = [1, 43, 54, 132];
+			const whatever = ['chris', 1, 'holly'];
+
+			const superUsers = [
+				{ name: 'chris' },
+				{ name: 'nick' },
+				{ name: 'holly' },
+			];
+
+			//declaring variables
+			var thing = 'first'; //deprecated
+
+			const otherThing = { name: 'chris' };
+			let newThing = 'third';
+
+			otherThing.name = 'holly';
+
+			// variable declaration & assignment
+			let myVariable;
+
+			myVariable = 'something';
+
+			//==============Operators
+			let a = 10,
+				b = 3,
+				c = 15;
+
+			let d = '5',
+				e = 'my name',
+				f = 'is chris';
+
+			console.groupCollapsed('Addition');
+			console.log(a + b); //13
+			console.log(a + c); //25
+			console.log(e + ' ' + f); //my name is chris
+			console.log(a + d); //105
+			console.log(typeof (a + d)); //string
+			console.log(e + ' is a batman'); //my name is a batman
+			console.groupEnd();
+
+			console.group('Multiplicaiton');
+			console.log(a * 3); //30
+			console.log(a * b); //30
+			console.log(b * c); //45
+			console.groupEnd();
+
+			console.groupCollapsed('Incrementing');
+			console.log(a + 1); //11
+			console.log(a++); //10,but a==11
+			console.log((c += a)); //26
+			console.groupEnd();
+
+			//=================Comparisons
+			const original = 'chris';
+			const clone = 'CHRIS';
+			console.groupCollapsed('String');
+			console.log(original == 'chris'); //true
+			console.log(original == clone); //false
+			console.log(original == clone.toLocaleLowerCase()); //true
+			console.groupEnd();
+
+			const num1 = 10;
+			const num2 = '10';
+			console.groupCollapsed('Numbers');
+			console.log(num1 == num2); //true
+			console.log(num1 === num2); //false
+			console.log(num1 != num2); //false
+			console.groupEnd();
+
+			let what; //undefined
+			let things = null;
+			console.groupCollapsed('Booleans');
+			console.log(Boolean(what)); //false
+			console.log(Boolean(things)); //false
+			console.log(Boolean({})); //true
+			console.log(Boolean([])); //true
+			console.groupEnd();
+
+			const firstArr = [1, 2, 3];
+			const secondArr = [1, 2, 3];
+			const firstObj = { color: 'red' };
+			const secondObj = { color: 'red' };
+
+			console.groupCollapsed('Objects and Arrays');
+			console.log(firstArr == secondArr); //false
+			console.log(firstObj == secondObj); //false
+			console.groupEnd();
+
+			console.groupCollapsed('And Or');
+			console.log(Boolean('blah') && Boolean('thing')); //true
+			console.log(Boolean('blah') && Boolean('')); //false
+			console.log(Boolean('blah') || Boolean('')); //true
+			console.log(Boolean('') && Boolean('')); //false
+			console.groupEnd();
+
+			//==============Conditionals,Flow, and Loops
+
+			//if
+			/*
+			const name = prompt('What is your name?');
+			const username = 'chrisoncode';
+
+			if (name == 'nick' || name == 'chris') {
+				alert('Hello!');
+			} else if (name == 'holly') {
+				console.log('this is holly');
+			} else {
+				console.log('not nick');
+			} */
+
+			//for loop
+			const dogsList = document.querySelector('.dogs-list');
+			const dogs = [
+				{ name: 'bruce', type: 'chihuahua' },
+				{ name: 'chance', type: 'bernese' },
+			];
+
+			/*
+			for (let i=0; i<dogs.length;i++){
+				const dog=dogs[i];
+				const dogData=document.createElement('div');
+				dogData.classList.add('jumbotron', 'text-center');
+				dogData.innerText=`${dog.name} is a ${dog.type}`;
+				dogsList.appendChild(dogData);
+			} */
+
+			//while loop
+			/* let i = 0;
+			while (i < dogs.length) {
+				const dog = dogs[i];
+				const dogData = document.createElement('div');
+				dogData.classList.add('jumbotron', 'text-center');
+				dogData.innerText = `${dog.name} is a ${dog.type}`;
+				dogsList.appendChild(dogData);
+			} */
+
+			//do while loop
+			/* let i = 0;
+			do {
+				const dog = dogs[i];
+				const dogData = document.createElement('div');
+				dogData.classList.add('jumbotron', 'text-center');
+				dogData.innerText = `${dog.name} is a ${dog.type}`;
+				dogsList.appendChild(dogData);
+			} while (i < dogs.length); */
+
+			//for ... of iterator
+			/* for (let dog of dogs) {
+				const dogData = document.createElement('div');
+				dogData.classList.add('jumbotron', 'text-center');
+				dogData.innerText = `${dog.name} is a ${dog.type}`;
+				dogsList.appendChild(dogData);
+			} */
+
+			//========Functions
+			function saySomething(message = 'goodbye', whisper = false) {
+				if (whisper) {
+					console.log(`%c${message}`, 'font-size:5px');
+				} else {
+					console.log(message);
+				}
+			}
+
+			saySomething('hello');
+			saySomething('my name is chris', true);
+			saySomething();
+
+			/* 1.
+			function squared(a) {
+				return a * a;
+			}
+			const newSquared=squared(3)
+			console.log(newSquared); */
+
+			/* 2.
+			const squared = function (a) {
+				return a * a;
+			};
+			const otherSquared = squared; */
+
+			//3.arrow function
+			const squared = (a) => {
+				return a * a;
+			};
+
+			//hoisting
+			punch();
+
+			function punch() {
+				console.log('punch here!');
+			}
+
+			//=========Objects
+			const hero = {
+				name: 'Bruce Wayne',
+				alias: 'Batman',
+				catchphrase: 'To the Batwave!',
+				speak: function () {
+					return 'Attention ' + this.catchphrase;
+				},
+				attack(sound) {
+					return `(punches bad guy) ${sound}`;
+				},
+			};
+			//access a property
+			const thingToLookFor = 'alias';
+
+			console.log(hero.name);
+			console.log(hero['name']);
+			console.log(hero[thingToLookFor]);
+			//access methods
+			console.log(hero.speak);
+			console.log(hero.speak());
+			console.log(hero.attack('POWWWW'));
+
+			//===============Built-in Objects
+			'this is my string'.toUpperCase();
+
+			const first = 'this is a string';
+			const second = String('this is a string');
+			console.log('this is a string'.toUpperCase());
+			console.log(String('this is a string').toUpperCase());
+			console.log(first === second);
+
+			console.group('Primitives vs Objects');
+			console.log(first === second);
+			console.log(
+				typeof first,
+				typeof String('this is a string'),
+				typeof new String()
+			);
+			console.groupEnd();
+
+			//Strings
+			const sentence = 'this is my sentence';
+
+			console.group('String');
+			console.log(first.toUpperCase());
+			console.log(second.toLocaleLowerCase());
+			console.log(sentence.startsWith('this is')); //true
+			console.log('🍺'.repeat(20));
+			console.log('look at me goo       '.trim());
+			console.groupEnd();
+
+			//numbers and math
+			console.group('Numbers and Math');
+			//console.log(1..toString()); 	//output:1
+			console.log((1).toString());
+			console.log(Number.isInteger(5));
+			console.log((1.56243).toFixed(2));
+			console.log(
+				Math.random(),
+				Math.ceil(1.56), //2
+				Math.floor(6.3) //6
+			);
+			console.groupEnd();
+
+			//arrays
+			const myArr = ['chris', 'nick', 'holly'];
+			console.group('Arrays');
+			console.log(myArr.length); //3
+			console.log(myArr.join('-'), myArr); //chris-nick-holly
+			console.log(myArr.push('ado'), myArr); //["chris", "nick", "holly", "ado"]
+			console.log(myArr.pop(), myArr); //["chris", "nick", "holly"]
+			console.groupEnd();
+
+			myArr.forEach(function (user) {
+				console.log(user);
+			});
+
+			myArr.forEach((user) => console.log(user));
+		</script>
+	</body>
+</html>

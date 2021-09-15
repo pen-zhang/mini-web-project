@@ -1,1 +1,2 @@
-# JavaScript-Project
+# Mini-fun-web-project
+

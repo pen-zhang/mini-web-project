@@ -18,7 +18,7 @@
 | 14 |	[Animated Navigation](https://github.com/pen-zhang/mini-web-project/tree/master/14.animated-navigation) |
 | 15 |	[Incrementing Counter](https://github.com/pen-zhang/mini-web-project/tree/master/15.incrementing-counter) |
 | 16 |	[Drink Water](https://github.com/pen-zhang/mini-web-project/tree/master/16.drink-water) |
-| 17 |	[Movie App] (https://github.com/pen-zhang/mini-web-project/tree/master/17.movie-app) |	
+| 17 |	[Movie App](https://github.com/pen-zhang/mini-web-project/tree/master/17.movie-app) |	
 | 18 |	[Background Slider](https://github.com/pen-zhang/mini-web-project/tree/master/18.background-slider) | 	
 | 19 |	[Theme Clock](https://github.com/pen-zhang/mini-web-project/tree/master/19.theme-clock) |
 | 20 |	[Button Ripple Effect](https://github.com/pen-zhang/mini-web-project/tree/master/20.button-ripple-effect) |

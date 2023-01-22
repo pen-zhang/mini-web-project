@@ -8,7 +8,7 @@
 | 04 | [Hidden Search Widget](https://github.com/pen-zhang/mini-web-project/tree/master/04.hidden-search) |
 | 05 |	[Blurry Loading](https://github.com/pen-zhang/mini-web-project/tree/master/05.blurry-loading) |
 | 06 |	[Scroll Animation](https://github.com/pen-zhang/mini-web-project/tree/master/06.scroll-animation) |
-| 07 |	[Split Landing Page(https://github.com/pen-zhang/mini-web-project/tree/master/07.split-landing-page) |
+| 07 |	[Split Landing Page](https://github.com/pen-zhang/mini-web-project/tree/master/07.split-landing-page) |
 | 08 |	[Form Wave](https://github.com/pen-zhang/mini-web-project/tree/master/08.form-wave) |
 | 09 |	[Sound Board](https://github.com/pen-zhang/mini-web-project/tree/master/09.sound-board) |
 | 10 |	[Dad Jokes](https://github.com/pen-zhang/mini-web-project/tree/master/10.dad-jokes) |
@@ -24,7 +24,7 @@
 | 20 |	[Button Ripple Effect](https://github.com/pen-zhang/mini-web-project/tree/master/20.button-ripple-effect) |
 | 21 |	[Drag N Drop](https://github.com/pen-zhang/mini-web-project/tree/master/21.drag%26drop) |
 | 22 |	[Drawing App](https://github.com/pen-zhang/mini-web-project/tree/master/22.drawing-app) |	
-| 23 |	{Kinetic Loader](https://github.com/pen-zhang/mini-web-project/tree/master/23.kinetic-loader) |
+| 23 |	[Kinetic Loader](https://github.com/pen-zhang/mini-web-project/tree/master/23.kinetic-loader) |
 | 24 |	[Content Placeholder](https://github.com/pen-zhang/mini-web-project/tree/master/24.content-placeholder) |
 | 25 |	[Sticky Navbar](https://github.com/pen-zhang/mini-web-project/tree/master/25.sticky-navigation) |
 | 26 |	[Double Vertical Slider](https://github.com/pen-zhang/mini-web-project/tree/master/26.double-vertical-slider) |
